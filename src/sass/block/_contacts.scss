@@ -1,0 +1,148 @@
+.contacts {
+    min-height: 400px;
+    padding: 100px 0 90px 0;
+    .title_fz24 {
+        line-height: 40px;
+    }
+    &__line {
+        @include line;
+        margin-top: 15px;
+    }
+    &__subtitle {
+        position: relative;
+        font-weight: 700;
+        @include subline;
+    }
+    &__icon {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+    &__link {
+        display: flex;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: $second_color;
+        box-shadow: 3px 3px 15px black;
+        transition: all 0.5s;
+        transform: rotate3d(1, 1, 1, -25deg);
+        &:hover {  
+            transform: rotate3d(1, 1, 1, 60deg);
+            background-color: $main_color;
+        }
+    }
+    &__grid-container {
+        margin-top: 60px;
+        display: grid;
+        grid-template: 265px 45px / 585px 500px;
+        row-gap: 30px;
+        justify-content: space-between;
+    }
+    &__form {
+        display: grid;
+        grid-template-columns: repeat(2, 280px);
+        grid-template-rows: 45px 190px 45px;
+        column-gap: 25px;
+        row-gap: 30px;
+        grid-column: 1 / 2;
+        grid-row: 1 / 3;
+        label {
+            position: absolute;
+            display: block;
+            top: -9px;
+            left: 12px;
+            background-color: #fff;
+            font-size: 12px;
+            padding: 0 10px;
+            margin-bottom: 0;
+            height: 18px;
+        }
+        button {
+            grid-row: auto;
+            grid-column: auto;
+        }
+    }
+    &__input {
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid;
+        }
+    }
+    &__text {
+        position: relative;
+        grid-column: 1 / 3;
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 5px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid;
+        }
+    }
+    &__btn {
+        grid-row: 3 / 4;
+        margin-top: 0;
+        height: 45px;
+        line-height: 44px;
+    }
+    &__descr {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        .descr-btn {
+            display: none;
+        }
+        .title_fz24 {
+            font-size: 21px;
+        }
+    }
+    &__subtext {
+        font-size: 14px;
+        text-align: center;
+        span {
+            font-size: 15px;
+            font-weight: 700;
+        }
+    }
+    &__btn {
+        margin: 0 auto;
+        height: 45px;
+        line-height: 44px;
+        grid-column: 2;
+        grid-row: 2;
+    }
+    &__privacy {
+        font-size: 14px;
+        padding-left: 10px;
+        input {
+            margin-right: 10px;
+        }
+    }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  box-shadow: 0 0 0px 10em white inset !important;
+  color: black !important;
+  animation: autofill 0s forwards;
+}
+
+@keyframes autofill {
+  100% {
+    background: transparent;
+    color: inherit;
+  }
+}

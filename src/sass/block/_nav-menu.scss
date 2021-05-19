@@ -1,0 +1,23 @@
+.nav-menu {
+    min-width: 500px;
+    margin-right: 50px;
+    &__list {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    &__link {
+        color: #fff;
+        text-decoration: none;
+        font-size: 13px;
+        font-weight: 500;
+        text-transform: uppercase;
+        &:hover {
+            color: $main_color;
+            text-decoration: none;
+        }
+    }
+}

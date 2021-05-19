@@ -1,0 +1,34 @@
+@mixin line {
+    &:before {
+        content: '';
+        background-color: $main_color;
+        position: absolute;
+        width: 90px;
+        height: 3px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+
+@mixin subline {
+    &:before {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: $main_color;
+        left: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    &:after {
+        content: '';
+        position: absolute;
+        width: 20px;
+        height: 2px;
+        background-color: $main_color;
+        right: -30px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}

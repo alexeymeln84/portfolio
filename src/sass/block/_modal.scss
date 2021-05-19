@@ -1,0 +1,117 @@
+.overlay {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background-color: rgba($color: #000000, $alpha: 0.56);
+}
+.modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 30px 40px;
+    width: 420px;
+    min-height: 400px;
+    background-color: #fff;
+    &__close {
+        position: absolute;
+        top: 0;
+        right: -45px;
+        font-size: 60px;
+        line-height: 21px;
+        color: $main_color;
+        cursor: pointer;
+    }
+    &__subtitle {
+        font-size: 16px;
+        font-weight: 700;
+        color: #000;
+        text-align: center;
+    }
+    &__descr {
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        text-align: center;
+    }
+    &__form {
+        display: grid;
+        grid-template: 40px 40px 40px 115px 40px 30px / 340px;
+        row-gap: 12px;
+        margin-top: 20px;
+        label {
+            position: absolute;
+            display: block;
+            top: -9px;
+            left: 12px;
+            background-color: #fff;
+            font-size: 12px;
+            padding: 0 10px;
+            margin-bottom: 0;
+            height: 18px;
+        }
+    }
+    &__input {
+        position: relative;
+        input {
+            width: 100%;
+            height: 100%;
+            padding: 0 20px;
+            font-size: 13px;
+            font-weight: 500;
+            border: 1px solid;
+        }
+        input[type=file] {
+            display: none;
+        }
+    }
+    &__text {
+        position: relative;
+        textarea {
+            width: 100%;
+            height: 100%;
+            resize: none;
+            padding: 5px 20px;
+            font-size: 14px;
+            font-weight: 500;
+            border: 1px solid;
+        }
+    }
+    &__privacy {
+        display: flex;
+        align-items: center;
+        padding: 0px;
+        font-size: 12px;
+        input {
+            margin-right: 12px;
+        }
+    }
+    .file {
+        .dawnload {
+            border: 1px solid #000;
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            font-size: 14px;
+            line-height: 40px;
+            padding: 0 20px;
+            img {
+                margin-right: 20px;
+                padding-bottom: 5px;
+            }
+        }  
+    }
+    &_mini {
+        min-height: 50px;
+    }
+}
+
+#consultation #thanks {
+    display: none;
+}

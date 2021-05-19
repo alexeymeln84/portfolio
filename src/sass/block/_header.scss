@@ -1,0 +1,22 @@
+.header {
+    position: fixed;
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:#000;
+    z-index: 2; 
+    &__logo {
+        margin-left: 50px;
+    }
+    &__link {
+        text-decoration: none;
+        img {
+            width: 170px;
+        }
+    }
+    &__hamburger {
+        display: none;
+    }
+}
